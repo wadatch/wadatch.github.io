@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>counter</title>
+        <link rel="stylesheet" href="contrib/flipclock/flipclock.css">
+        <style>
+            body {
+                background: #333; /* 背景色 */
+                color: #eee; /* 文字の色 */
+            }
+
+            #generic-counter {
+                text-align: right;
+                font-size: 300pt; /* 文字の大きさ */
+            }
+        </style>
+    </head>
+    <body>
+        <div id='init-screen'>
+            <h1>counter</h1>
+            <h2>初期設定</h2>
+            <label for='init-number'>初期値</label>
+            <input type='number' name='init-number' id='init-number' min='0' value='0'>
+            <button id='generic-start'>カウンター表示（通常)</button>
+            <button id='flip-start'>カウンター表示（フリップ)</button>
+            <ul>
+                <li>スペースキー: リセット</li>
+                <li>下矢印キー: カウントダウン　※フリップでは使えません</li>
+                <li>上記以外のキー: カウントアップ</li>
+            </ul>
+        </div>
+        <div id='generic-screen' style='display: none;'>
+            <div id='generic-counter'></div>
+        </div>
+        <div id='flip-screen' style='display: none;'>
+            <div id='flip-counter'></div>
+        </div>
+        <script src="contrib/jquery/jquery-3.1.0.js"></script>
+        <script src="contrib/flipclock/flipclock.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
